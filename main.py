@@ -171,6 +171,8 @@ class music(tk.Tk):
             
             mixer.music.load(self.loc)
             mixer.music.play(0,self.var)
+            self.pause_button.configure(image=self.pause_icon)
+            self.pause_var=True
             song=MP3(self.loc)
             self.time_label.configure(text=f'{round(song.info.length/60,2)} min')
             
